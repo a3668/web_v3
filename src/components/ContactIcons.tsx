@@ -1,6 +1,13 @@
 import { contact } from "../siteContent";
+import type { ReactNode } from "react";
 
-function ContactIcon({ href, label, children }) {
+type ContactIconProps = {
+  href: string;
+  label: string;
+  children: ReactNode;
+};
+
+function ContactIcon({ href, label, children }: ContactIconProps) {
   return (
     <a
       className="contact-icon"

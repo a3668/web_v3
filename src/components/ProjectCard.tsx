@@ -1,4 +1,9 @@
 import { Link } from "react-router-dom";
+import type { Project } from "../siteContent";
+
+type ProjectCardProps = {
+  project: Project;
+};
 
 const GitHubIcon = () => (
   <svg
@@ -32,7 +37,7 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   const githubLink = project.links.find((l) => l.type === "github");
 
   return (
